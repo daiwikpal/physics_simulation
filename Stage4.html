@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DAIWIK PAL - Stage-4</title>
+    <style>
+        body{background-color: #666;}
+        #canvas {background-color: #ccc;}
+    </style>
+</head>
+<body style="font-family: 'American Typewriter'">
+<h1> Stage - 4</h1>
+<canvas id="canvas" width="800" height="600"></canvas>
+<script src= "Stage4.js"></script>
+<br>
+<input type = "button" value = "Launch Ball!" onclick=" init();">
+<input type = "button" value = "Pause/Play" onclick=" setPause();">
+Paused = <span id = "pause_readout">false</span>
+<br>
+<input type = "range" id="velocity_slider" min = "0" max = "100" step = "5" value="40" oninput="showVelocity();" onchange="showVelocity();">
+Initial Velocity = <span id="velocity_readout"> 40 </span> m/s
+
+<br>
+
+
+ <input type = "range" id="angle_slider" min = "-90" max = "90" step = "1" value="60" oninput="showAngle();" onchange="showAngle();">
+Initial Angle = <span id = "angle_readout"> 60 </span> degrees
+
+<br>
+<input type = "range" id="height_slider" min = "0" max = "100" step = "5" value="30" oninput="showHeight()" onchange="showHeight()">
+Initial Height = <span id = "height_readout"> 30</span> meters
+<br>
+<div>
+    <h3> Important OutPuts </h3>
+    <b>Time =</b> <span id="time_readout"> 0</span> seconds
+    <br>
+    <b>ΔX = </b><span id = "xPos_readout"> 0 </span> meters
+    <br>
+    <b>ΔY = </b><span id = "yPos_readout"> 0 </span> meters
+    <br>
+    <b>X-Direction Velocity =</b> <span id = "xVelocity_readout"> 0 </span> meters per second
+    <br>
+    <b> Y-Direction Velocity = </b> <span id = "yVelocity_readout"> 0 </span> meters per second
+</div>
+</body>
+</html>
+
